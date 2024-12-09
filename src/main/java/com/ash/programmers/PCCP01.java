@@ -4,8 +4,8 @@ public class PCCP01 {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-//        String result = solution.solution("07:22", "04:05", "00:15", "04:07", new String[]{"next"});
-        String result = solution.solution("10:55", "00:05", "00:15", "06:55", new String[]{"prev", "next", "next"});
+        String result = solution.solution("07:22", "04:05", "00:15", "04:07", new String[]{"next"});
+//        String result = solution.solution("10:55", "00:05", "00:15", "06:55", new String[]{"prev", "next", "next"});
         System.out.println(result);
     }
 
@@ -23,8 +23,8 @@ public class PCCP01 {
                     posSec = prev(posSec);
                 } else {
                     posSec = next(posSec, viedoLenSec);
+                    posSec = pass(op_start, op_end, posSec);
                 }
-                posSec = pass(op_start, op_end, posSec);
             }
 
             int time = (posSec / 60);
@@ -45,6 +45,8 @@ public class PCCP01 {
         private Integer next(Integer posSec, Integer viedoLenSec) {
             if (posSec < viedoLenSec) {
                 posSec += 10;
+            } else {
+                posSec = viedoLenSec;
             }
             return posSec;
         }
