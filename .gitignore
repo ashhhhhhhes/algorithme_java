@@ -36,3 +36,6 @@ build/
 
 ### Mac OS ###
 .DS_Store
+/.gradle/
+/src/test/java/com/ash/programmers/codeTest/
+/src/main/java/com/ash/programmers/codeTest/
