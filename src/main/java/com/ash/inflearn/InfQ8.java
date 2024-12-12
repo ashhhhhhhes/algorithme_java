@@ -7,15 +7,12 @@ public class InfQ8 {
     public String solution(String text) {
 
         text = text
-                .replaceAll("[^a-zA-Z]", "")
-                .toUpperCase();
+                .toUpperCase()
+                .replaceAll("[^A-Z]", "");
 
-        for (int i =0; i < text.length() / 2; i++) {
-            if (text.charAt(i) != text.charAt(text.length() - i - 1)) {
-                return "NO";
-            }
-        }
 
+        String revers = new StringBuilder(text).reverse().toString();
+        if (!revers.equals(text)) return  "NO";
         return "YES";
     }
 
