@@ -5,6 +5,7 @@ public class InfQ11 {
     public String solution(String in) {
 
         int cnt = 1;
+        in += " ";
         StringBuilder sb = new StringBuilder();
 
         for (int i =1; i < in.length(); i++) {
@@ -15,13 +16,6 @@ public class InfQ11 {
                 if (cnt > 1) {
                     sb.append(cnt);
                     cnt =1;
-                }
-            }
-
-            if (i == in.length() -1) {
-                sb.append(in.charAt(i));
-                if (cnt > 1) {
-                    sb.append(cnt);
                 }
             }
         }
