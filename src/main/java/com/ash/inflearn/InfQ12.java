@@ -8,22 +8,14 @@ public class InfQ12 {
 
         StringBuilder result = new StringBuilder();
 
+        text = text
+                .replaceAll("#", "1")
+                .replaceAll("\\*", "0");
+
         for (int i = 0; i < count; i++) {
-            // 0 - 6, 7 - 13
             int s = i * 7;
             String pass = text.substring(s, s + 7);
-            int dd = 64;
-            int asciiCode = 0;
-
-            for (int j = 0; j < pass.length(); j++) {
-                if (pass.charAt(j) == '#') {
-                    asciiCode += dd;
-                }
-
-                dd = dd / 2;
-            }
-
-            result.append((char) asciiCode);
+            result.append((char) Integer.parseInt(pass, 2));
         }
 
         return result.toString();
