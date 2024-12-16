@@ -1,5 +1,6 @@
 package com.ash.inflearn;
 
+import com.ash.inflearn.string.InfQ11;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

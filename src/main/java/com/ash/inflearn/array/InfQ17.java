@@ -1,4 +1,4 @@
-package com.ash.inflearn;
+package com.ash.inflearn.array;
 
 public class InfQ17 {
 
@@ -9,10 +9,10 @@ public class InfQ17 {
         for (int i = 1; i <= n; i++) {
             arr[i-1] = i;
         }
-        // n < p < f(n)
+
         for (int i = 1; i < n; i++) {
             if (arr[i] != 0) {
-                int num = arr[i]; // 2
+                int num = arr[i];
                 for (int r = 1; r < n / num; r++) {
                         arr[i + num * r]  = 0;
                 }

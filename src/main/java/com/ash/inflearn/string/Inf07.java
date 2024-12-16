@@ -1,4 +1,4 @@
-package com.ash.inflearn;
+package com.ash.inflearn.string;
 
 import java.util.Scanner;
 

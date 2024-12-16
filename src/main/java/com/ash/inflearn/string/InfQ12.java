@@ -1,6 +1,4 @@
-package com.ash.inflearn;
-
-import java.util.Scanner;
+package com.ash.inflearn.string;
 
 public class InfQ12 {
 

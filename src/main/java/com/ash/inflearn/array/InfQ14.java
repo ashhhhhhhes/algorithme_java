@@ -1,6 +1,4 @@
-package com.ash.inflearn;
-
-import java.util.Arrays;
+package com.ash.inflearn.array;
 
 public class InfQ14 {
 

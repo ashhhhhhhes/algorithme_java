@@ -1,4 +1,4 @@
-package com.ash.inflearn;
+package com.ash.inflearn.array;
 
 public class InfQ13 {
 

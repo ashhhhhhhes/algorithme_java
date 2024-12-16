@@ -1,5 +1,6 @@
 package com.ash.inflearn;
 
+import com.ash.inflearn.array.InfQ15;
 import org.junit.jupiter.api.Test;
 
 class InfQ15Test {
