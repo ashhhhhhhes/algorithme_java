@@ -1,5 +1,7 @@
 package com.ash.inflearn;
 
+import java.util.Arrays;
+
 public class InfQ16 {
 
     public String solution(int n) {
@@ -14,6 +16,17 @@ public class InfQ16 {
         }
 
         return sb.toString().trim();
+    }
+
+    public int[] solutionArray(int n) {
+        int[] arr = new int[n];
+        arr[0] = 1;
+        arr[1] = 1;
+        for (int i = 2; i < n; i++) {
+            arr[i] = arr[i-1] + arr[i-2];
+        }
+
+        return arr;
     }
 
 }
