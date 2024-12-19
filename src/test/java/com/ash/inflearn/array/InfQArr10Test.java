@@ -18,6 +18,6 @@ class InfQArr10Test {
                 new int[] {8 ,7, 3 ,5, 2}
         };
 
-        Assertions.assertEquals(10, infQArr10.solution(n, grid));
+        Assertions.assertEquals(10, infQArr10.answer(n, grid));
     }
 }

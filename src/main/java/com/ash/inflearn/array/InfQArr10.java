@@ -23,4 +23,33 @@ public class InfQArr10 {
         return cnt;
     }
 
+    int[] dx = new int[]{-1, 0, 1, 0};
+    int[] dy = new int[]{0, 1, 0, -1};
+
+    public int answer(int n, int[][] grid) {
+        int cnt = 0;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                boolean flag = true;
+                for (int k = 0; k < 4; k++) {
+                    int x = i + dx[k];
+                    int y = j + dy[k];
+
+                    if (x < 0 || x >= n || y < 0 || y >= n) {
+                        continue;
+                    }
+
+                    if (grid[i][j] <= grid[x][y]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) cnt++;
+            }
+        }
+
+        return cnt;
+    }
+
 }
