@@ -15,6 +15,10 @@ public final class TestScanner {
         this.scanner = new Scanner(inputStream);
     }
 
+    public int nextInt() {
+        return scanner.nextInt();
+    }
+
     // Scanner의 주요 메서드를 위임(wrapping)
     public boolean hasNextLine() {
         return scanner.hasNextLine();
