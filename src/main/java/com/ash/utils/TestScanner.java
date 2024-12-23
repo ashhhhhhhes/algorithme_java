@@ -15,6 +15,14 @@ public final class TestScanner {
         this.scanner = new Scanner(inputStream);
     }
 
+    public TestScanner(String input) {
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(
+                input.getBytes(StandardCharsets.UTF_8)
+        );
+
+        this.scanner = new Scanner(inputStream);
+    }
+
     public int nextInt() {
         return scanner.nextInt();
     }
