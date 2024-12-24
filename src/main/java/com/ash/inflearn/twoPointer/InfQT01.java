@@ -18,24 +18,18 @@ public class InfQT01 {
 
         while (result.size() < n + m) {
             if (p1 == n) {
-                result.add(mArr[p2]);
-                p2++;
+                result.add(mArr[p2++]);
                 continue;
             }
 
             if (p2 == m) {
-                result.add(nArr[p1]);
-                p1++;
+                result.add(nArr[p1++]);
                 continue;
             }
 
-            if (nArr[p1] < mArr[p2]) {
-                result.add(nArr[p1]);
-                p1++;
-            } else {
-                result.add(mArr[p2]);
-                p2++;
-            }
+            if (nArr[p1] < mArr[p2]) result.add(nArr[p1++]);
+            else result.add(mArr[p2++]);
+
         }
 
         return result.stream().map(String::valueOf).collect(Collectors.joining(" "));
