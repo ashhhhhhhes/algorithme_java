@@ -55,8 +55,8 @@ public class HashQ4 {
         for (int i = T.length() - 1; i < S.length(); i++) {
             map.put(S.charAt(i), map.getOrDefault(S.charAt(i), 0) + 1);
             if (tMap.equals(map)) result++;
-            if (map.containsKey(S.charAt(pl))) map.put(S.charAt(pl), map.get(S.charAt(pl)) - 1);
-            if (map.getOrDefault(S.charAt(pl) , 0) == 0) map.remove(S.charAt(pl));
+            map.put(S.charAt(pl), map.get(S.charAt(pl)) - 1);
+            if (map.get(S.charAt(pl)) == 0) map.remove(S.charAt(pl));
             pl++;
         }
 
