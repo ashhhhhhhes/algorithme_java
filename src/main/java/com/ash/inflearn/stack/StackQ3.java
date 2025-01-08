@@ -27,8 +27,7 @@ public class StackQ3 {
         Stack<Integer> basket = new Stack<>();
 
         int answer = 0;
-        for (int i = 0; i < m; i++) {
-            int move = moves[i];
+        for (int move : moves) {
             Stack<Integer> stack = arr.get(move - 1);
             if (!stack.isEmpty()) {
                 int doll = stack.pop();
