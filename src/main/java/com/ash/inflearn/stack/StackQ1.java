@@ -16,6 +16,6 @@ public class StackQ1 {
             else stack.pop();
         }
 
-        return "YES";
+        return stack.isEmpty() ? "YES" : "NO";
     }
 }

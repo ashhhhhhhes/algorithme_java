@@ -9,6 +9,6 @@ class StackQ1Test {
     @Test
     void solution() {
         StackQ1 stackQ1 = new StackQ1();
-        assertEquals("NO", stackQ1.solution("((()())())))"));
+        assertEquals("NO", stackQ1.solution("(()()"));
     }
 }
