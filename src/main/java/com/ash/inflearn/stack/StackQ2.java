@@ -15,10 +15,7 @@ public class StackQ2 {
         for (char c : s.toCharArray()) {
             if (c != ')') stack.push(c);
             else {
-                char temp = ' ';
-                while (temp != '(') {
-                    temp = stack.pop();
-                }
+                while (stack.pop() != '(');
             }
         }
 
