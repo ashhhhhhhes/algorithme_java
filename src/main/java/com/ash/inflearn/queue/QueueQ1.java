@@ -1,4 +1,4 @@
-package com.ash.inflearn.stack;
+package com.ash.inflearn.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
