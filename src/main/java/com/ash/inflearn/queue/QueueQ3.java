@@ -27,8 +27,8 @@ public class QueueQ3 {
             }
 
             if (p != null) {
-                if (p.idx == m) return ++answer;
-                else answer++;
+                answer++;
+                if (p.idx == m) return answer;
             }
         }
 
