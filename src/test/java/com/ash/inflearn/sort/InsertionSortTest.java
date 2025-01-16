@@ -10,6 +10,7 @@ class InsertionSortTest {
     void test() {
         InsertionSort T = new InsertionSort();
         assertEquals("5 6 7 9 10 11", T.solution(new int[]{11, 7, 5, 6, 10, 9}));
+        assertEquals("5 6 7 9 10 11", T.solution2(new int[]{11, 7, 5, 6, 10, 9}));
 
     }
 

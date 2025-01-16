@@ -22,4 +22,19 @@ public class InsertionSort {
         return Arrays.stream(arr).mapToObj(String::valueOf).collect(Collectors.joining(" "));
     }
 
+    public String solution2(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int t = arr[i], j;
+            for (j = i - 1; j >= 0; j--) {
+                if (t < arr[j]) {
+                    arr[j + 1] = arr[j];
+                } else break;
+            }
+
+            arr[j+1] = t;
+        }
+
+        return Arrays.stream(arr).mapToObj(String::valueOf).collect(Collectors.joining(" "));
+    }
+
 }
