@@ -36,7 +36,6 @@ public class SortQ6 {
     }
 
     public String solution2(int[] arr) {
-        ArrayList<Integer> list =  new ArrayList<>();
         int[] tmp = arr.clone();
         Arrays.sort(tmp);
 
