@@ -1,5 +1,9 @@
 package com.ash.inflearn.sort;
 
+import java.sql.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * 6. 장난꾸러기
  */
@@ -31,4 +35,18 @@ public class SortQ6 {
         return max + " " + min;
     }
 
+    public String solution2(int[] arr) {
+        ArrayList<Integer> list =  new ArrayList<>();
+        int[] tmp = arr.clone();
+        Arrays.sort(tmp);
+
+        String answer = "";
+        for (int i =0; i<arr.length; i++) {
+            if (arr[i] != tmp[i]) {
+                answer += (i + 1) + " ";
+            }
+        }
+
+        return answer.trim();
+    }
 }
