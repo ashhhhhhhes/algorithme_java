@@ -4,8 +4,12 @@ import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
-public final class TestScanner {
+public final class TestScanner  {
     private final Scanner scanner;
+
+    public Scanner getScanner() {
+        return this.scanner;
+    }
 
     public TestScanner(String[] input) {
         ByteArrayInputStream inputStream = new ByteArrayInputStream(
