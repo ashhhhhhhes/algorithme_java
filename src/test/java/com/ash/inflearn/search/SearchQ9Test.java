@@ -1,4 +1,4 @@
-package com.ash.inflearn.sort;
+package com.ash.inflearn.search;
 
 import com.ash.utils.StringParseUtils;
 import org.junit.jupiter.api.Test;

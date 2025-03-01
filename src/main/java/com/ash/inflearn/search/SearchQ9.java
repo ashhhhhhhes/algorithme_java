@@ -1,4 +1,4 @@
-package com.ash.inflearn.sort;
+package com.ash.inflearn.search;
 
 import java.util.Arrays;
 
