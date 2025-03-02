@@ -11,6 +11,7 @@ class RecursiveQ1Test {
         RecursiveQ1 T = new RecursiveQ1(3);
 
         assertEquals("1 2 3", T.printRecursive());
+        assertEquals("1 2 3", T.printRecursive(3, ""));
     }
 
 }

@@ -14,8 +14,14 @@ public class RecursiveQ1 {
     int v= 1;
     List<Integer> list = new ArrayList<>();
 
+
     public RecursiveQ1(int n) {
         this.n = n;
+    }
+
+    public String printRecursive(int n, String s) {
+        if (n == 0) return s.trim();
+        return (this.printRecursive(n-1, s) + " " + n).trim();
     }
 
     public String printRecursive() {
