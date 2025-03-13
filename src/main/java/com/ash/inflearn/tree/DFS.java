@@ -17,11 +17,33 @@ public class DFS {
     }
 
     public String inorder(VNode root) {
-        return "";
+        String merge = "";
+
+        if (root.lt != null) {
+            merge += inorder(root.lt);
+        }
+
+        merge += root.toString();
+
+        if (root.rt != null) {
+            merge += inorder(root.rt);
+        }
+
+        return merge;
     }
 
     public String postorder(VNode root) {
-        return "";
+        String merge = "";
+
+        if (root.lt != null) {
+            merge += postorder(root.lt);
+        }
+
+        if (root.rt != null) {
+            merge += postorder(root.rt);
+        }
+
+        return merge += root.toString();
     }
 
 }
