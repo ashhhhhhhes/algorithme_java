@@ -1,5 +1,7 @@
 package com.ash.programmers;
 
+import java.util.Arrays;
+
 public class PCCP02 {
 
     /**
@@ -9,33 +11,37 @@ public class PCCP02 {
      * @return
      */
     public int solution(int[] diffs, int[] times, long limit) {
-        int length = diffs.length;
-        int level = 1;
-
-        // 최솟값...
-        while (true) {
-            long solvedTime = 0;
-
-            for (int i = 0; i < length; i++) {
-                int diff = diffs[i];
-                int time_curr = times[i];
-                int time_prev = i != 0 ? times[i - 1] : 0;
-
-                if (diff <= level) {
-                    solvedTime += time_curr;
-                } else {
-                    solvedTime += time_curr + (long) (time_curr + time_prev) * (diff - level);
-                }
+        int left = Arrays.stream(diffs).min().getAsInt(), right = Arrays.stream(diffs).max().getAsInt();
+        int mid = 0;
+        while (left < right) {
+            mid = (left + right) / 2;
+            if (isCanCompleted(diffs, times, limit, mid)) {
+                right = mid;
+            } else {
+                left = mid + 1;
             }
-
-            if (solvedTime <= limit) {
-                break;
-            }
-
-            level++;
         }
 
-        return level;
+        return left;
+    }
+
+    private boolean isCanCompleted(int[] diffs, int[] times, long limit, int level) {
+        long total = 0;
+        int prevTime = 0;
+
+        for (int i = 0; i < diffs.length; i++) {
+            int diff = diffs[i], curTime = times[i];
+
+            if (diff <= level) {
+                total += times[i];
+            } else {
+                total += (long )(curTime+prevTime) * (diff - level)  + curTime;
+            }
+
+            prevTime = curTime;
+        }
+
+        return total <= limit;
     }
 
 }
