@@ -9,6 +9,10 @@ public class VNode {
         lt=rt=null;
     }
 
+    public boolean isFull() {
+        return this.lt != null && this.rt != null;
+    }
+
     @Override
     public String toString() {
         return data + "";
