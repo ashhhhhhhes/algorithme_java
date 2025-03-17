@@ -14,18 +14,20 @@ public class BFSQ02 {
      */
     public int solution(int s, int e) {
         int level = 0;
+        int[] check = new int[10001];
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(s);
         while (!queue.isEmpty()) {
             int len = queue.size();
             for (int i = 0; i < len; i++) {
                 int cur = queue.poll();
-                if (cur != e) {
-                    queue.add(cur + distnace[0]);
-                    queue.add(cur + distnace[1]);
-                    queue.add(cur + distnace[2]);
-                } else {
-                    return level;
+                if (cur == e) return level;
+                for (int k = 0; k < distnace.length; k++) {
+                    int x = cur + distnace[k];
+                    if (x >= 1 && x <= 10000 && check[x] == 0) {
+                        check[x] = 1;
+                        queue.offer(x);
+                    }
                 }
             }
             level++;
