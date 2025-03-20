@@ -1,4 +1,4 @@
-package com.ash.programmers;
+package com.ash.programmers.pccp;
 
 public class PCCP01 {
 

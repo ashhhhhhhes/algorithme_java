@@ -21,9 +21,9 @@ public class BFSQ02 {
             int len = queue.size();
             for (int i = 0; i < len; i++) {
                 int cur = queue.poll();
-                if (cur == e) return level;
                 for (int k = 0; k < distnace.length; k++) {
                     int x = cur + distnace[k];
+                    if (x == e) return level + 1;
                     if (x >= 1 && x <= 10000 && check[x] == 0) {
                         check[x] = 1;
                         queue.offer(x);
