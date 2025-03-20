@@ -31,8 +31,8 @@ public class ShortestPathTreeQ {
             for (int i = 0; i < len; i++) {
                 VNode node = queue.poll();
                 if (node.lt == null && node.rt == null) return L;
-                queue.add(node.lt);
-                queue.add(node.rt);
+                if (node.lt != null) queue.add(node.lt);
+                if (node.rt != null)  queue.add(node.rt);
             }
             L++;
         }
